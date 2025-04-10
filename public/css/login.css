@@ -1,0 +1,252 @@
+/* 
+ * login.css
+ * This file contains all the styling for the login and registration pages.
+ * It includes styles for forms, buttons, animations, and responsive design.
+ */
+
+/* ============ HIDDEN ELEMENTS SECTION ============ */
+/* Hide specific elements */
+.breadcrumb,header .right{
+    display: none !important;
+}
+
+/* ============ MAIN LAYOUT SECTION ============ */
+/* Main container styles */
+main{
+    height: 92vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(246, 252, 255);
+    flex-direction: column;
+}
+
+/* ============ LOGIN/CREATE FORMS SECTION ============ */
+/* Form container styles */
+.create,.login{
+    height: 400px;
+    width: 60vw;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    opacity: 1;
+}
+.create{
+    display: none;
+    opacity: 0;
+}
+.main .left{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(95, 151, 169);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+}
+.main  .left>span{
+    margin-bottom: .5rem ;
+    color: aliceblue;
+}
+.main h1{
+    margin-bottom: 1rem;
+    color: white;
+}
+.main  .left button{
+    width: 60%;
+    height: 2.2rem;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px #fff solid;
+    margin-top: .5rem;
+    color: white;
+    transition: .3s ease;
+}
+.main button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.main .right{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    transition: 1s ease;
+}
+.main .right p{
+    font-size: 2rem;
+    color: rgb(95, 151, 169);
+    text-align: center;
+}
+#regist,#login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main .input{
+    width:65%;
+    height: 2.5rem;
+    background-color: #eaf4f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.main input{
+    width: 90%;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+.main input:focus{
+    border: 0;
+}
+.main .right button{
+    width: 30%;
+    height: 2.2rem;
+    background-color: rgb(95, 151, 169);
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    margin-top: 1rem;
+    transition: .3s ease;
+}
+.login .left{
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.login .forgot{
+    width: 60%;
+    margin-top: 1rem;
+    text-align: center;
+}
+.login .forgot a{
+    color: rgb(95, 151, 169);
+    text-decoration: none;
+}
+.login .forgot a:hover{
+    text-decoration: underline;
+}
+.input.pdw{
+    position: relative;
+}
+.open{
+    opacity: 0;
+}
+.close{
+    opacity: 1;
+}
+.open,.close{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* ============ ANIMATIONS SECTION ============ */
+/* Animation keyframes */
+@keyframes changeToSignUp1 {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  @keyframes changeToSignUp2 {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+/* ============ FORM ELEMENTS SECTION ============ */
+/* Radio button styles */
+.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.radio-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.radio-item label{
+    font-size: .8rem;
+    margin-right: 2px;
+}
+input[type="radio"]:checked {
+    accent-color: #5b9591;
+}
+
+/* ============ RESPONSIVE DESIGN SECTION ============ */
+/* Media queries for different screen sizes */
+@media (min-width:2000px){
+    .login,.create{
+        height: 800px !important;
+    }
+}
+
+@media (max-width:992px){
+    .main{
+        padding: 1.5rem;
+    }
+    .main h1,.main .right p{
+        font-size: 1.8rem;
+    }
+    .main .input{
+        width: 80%;
+    }
+    .login .forgot a,.main .left>span{
+        font-size: .8rem;
+    }
+    .main .right button{
+        width: 50%;
+    }
+    .create ,.login{
+        width: 80vw;
+    }
+
+}
+
+@media (max-width:635px){
+    .create ,.login{
+        width: 90vw;
+    }
+    .main{
+        padding: .5rem;
+        width: 100vw;
+    }
+    .main h1,.main .right p{
+        font-size: 1.5rem;
+    }
+    .main .left,.main .right{
+        width: 50%;
+        padding: .5rem;
+    }
+    .login .forgot a,.main .left>span,.radio-item label{
+        font-size: 8px;
+    }
+    .main .input{
+        width: 90%;
+    }
+}

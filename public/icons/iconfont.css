@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4846431 */
+  src: url('iconfont.woff2?t=1743692541622') format('woff2'),
+       url('iconfont.woff?t=1743692541622') format('woff'),
+       url('iconfont.ttf?t=1743692541622') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-duigou:before {
+  content: "\ebe6";
+  color: rgb(34, 197, 94);
+}
+
+.icon-cuocha_kuai:before {
+  content: "\ed1e";
+  color: red;
+}
+
+.icon-genggai:before {
+  content: "\e723";
+}
+
+.icon-female:before {
+  content: "\e610";
+  color: pink;
+}
+
+.icon-male:before {
+  content: "\e615";
+  color: cornflowerblue;
+}
+
+.icon-aixin_shixin:before {
+  content: "\eca1";
+}
+
+.icon-upward:before {
+  content: "\e620";
+}
+
+.icon-shuaxin:before {
+  content: "\e631";
+}
+
+.icon-zhankai:before {
+  content: "\e7e7";
+}
+
+.icon-gonggao:before {
+  content: "\e630";
+}
+
+.icon-24gl-expand:before {
+  content: "\eb6d";
+}
+
+.icon-add:before {
+  content: "\e637";
+}
+
+.icon-delete:before {
+  content: "\e64b";
+}
+
+.icon-editor:before {
+  content: "\e6f5";
+}
+
+.icon-eye-close:before {
+  content: "\e8ff";
+}
+
+.icon-search:before {
+  content: "\e6b9";
+}
+
+.icon-eye:before {
+  content: "\e78f";
+}
+
+.icon-xiaoxi:before {
+  content: "\e61f";
+}
+
+.icon-xiaoxi1:before {
+  content: "\e609";
+}
+
+.icon-bx-log-out:before {
+  content: "\e653";
+}
+
+.icon-home:before {
+  content: "\e857";
+}
+
+.icon-setting:before {
+  content: "\e87e";
+}
+
+.icon-cuowutishitianchong:before {
+  content: "\e675";
+}
+
+.icon-dui:before {
+  content: "\e645";
+}
+
+.icon-facebook3:before {
+  content: "\e6e1";
+}
+
+.icon-banjiketang:before {
+  content: "\e632";
+}
+
+.icon-parents:before {
+  content: "\e674";
+}
+
+.icon-Student:before {
+  content: "\e707";
+}
+
+.icon-gongzi:before {
+  content: "\e600";
+}
+
+.icon-instagram:before {
+  content: "\e6fc";
+}
+
+.icon-twiter:before {
+  content: "\e601";
+}
+
+.icon-teacher_basic:before {
+  content: "\e650";
+}
+
+.icon-location-fill:before {
+  content: "\e83d";
+}
+
+.icon-email-fill:before {
+  content: "\e856";
+}
+
+.icon-phone-fill:before {
+  content: "\e85f";
+}
+
+.icon-dagou-4:before {
+  content: "\e60e";
+}
+
+.icon-library:before {
+  content: "\e822";
+}
+

@@ -1,0 +1,344 @@
+/* 
+ * index.css
+ * This file contains all the styling for the website's homepage.
+ * It includes styles for the dashboard, introduction section, announcement section,
+ * and various interactive elements. The design features a modern, clean interface
+ * with responsive layouts and smooth transitions.
+ */
+
+/* ============ MAIN LAYOUT SECTION ============ */
+/* Main container styles */
+main{
+    min-height:80vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Main container inner layout */
+main .container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+/* ============ DASHBOARD SECTION ============ */
+/* Dashboard shell container */
+.dash-shell{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(226, 244, 250);
+}
+
+/* Dashboard layout */
+.dashboard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.d-title{
+    width: 100%;
+    height: 20px;
+    margin-left: 20px;
+}
+.dash-box{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #fff;
+    min-width: 100px;
+    width: 23%;
+    padding: 10px;
+}
+.dash-box .left>p{
+    font-weight: bold;
+    color: #1F2D3D;
+    margin-left: 20px;
+}
+.dash-box .left>span{
+    font-size: 10px;
+    color: #1f2d3db8;
+}
+.dash-box .right>i{
+    font-size: 26px;
+}
+.part{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+.part-left{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    width: 70%;
+}
+/* intro section strat */
+.intro{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro .left,.intro .right{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(226, 244, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.intro .left{
+    position: relative;
+    background-color: transparent;
+}
+
+/* Profile background effect */
+.intro .left .bcc{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(222, 245, 249);
+    z-index: 0;
+    border-radius: 50%;
+    top: -5px;
+    right: -10px;
+    background: radial-gradient(circle, rgba(200, 230, 230, 0.6) 20%, rgba(255, 255, 255, 0) 80%);
+}
+.intro .left img{
+    object-fit: cover;
+    width: 90%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.intro .right{
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+    color:  #1F2D3D ;
+    justify-content: center;
+}
+.sentence{
+    display: flex;
+    align-items: baseline;
+    width: 80%;
+    margin: 10px 0;
+}
+.sentence>p{
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.right>button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(132, 198, 216);
+    margin-top: 1rem;
+    transition: .3s ease;
+    font-size: 10px;
+    color: #f0fcff;
+}
+.right>button:hover{
+    background-color: rgb(118, 174, 189);
+    transform: scale(1.05);
+}
+.time-card {
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgb(222, 245, 249);
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+.time-card h4 {
+  font-size: 1rem;
+  color: rgb(107, 148, 227);
+  margin-bottom: 0.5rem;
+}
+
+#clock {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #1F2D3D;
+  letter-spacing: 1px;
+}
+  
+/* intro section end */
+.boxes{
+    margin-top: 2rem;
+    width: 100%;
+}
+.title{
+    font-size: 2rem;
+    padding-bottom: 5px;
+    border-bottom: #d9e4e2 solid 1px;
+    margin-bottom: 1rem;
+    color: #61757a;
+}
+.shell{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+.box{
+    height: 200px;
+    background-color: #d6ecf0;
+    border-radius: 10px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: not-allowed;
+    box-shadow: 3px 3px 3px 3px #d9e4e2;
+    transition: ease .5s;
+    z-index: 0;
+    opacity: 0.6;
+    color: #1F2D3D;
+}
+.box.admin:hover,.box.student:hover,.box.parents:hover,.box.teachers:hover{
+    transform: translateY(-5px);
+}
+.box>i{
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+    z-index: 1;
+}
+.box>i::after{
+    content: '';
+    height: 50px;
+    width: 50px;
+    background-color: rgb(246, 252, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: -1;
+}
+.box.admin,.box.student,.box.teachers,.box.parents{
+    cursor: pointer;
+    opacity: 1;
+}
+
+/*region  annoucement section start */
+.announcement{
+    height: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: rgb(226, 244, 250);
+    padding: 1rem;
+    position: relative;
+}
+.more{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.more a{
+    text-decoration: none;
+    color: #1F2D3D;
+}
+.announcement .shell {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem; 
+    padding: 1rem;
+  }
+  
+.announcement  .card{
+    width: 100%;
+    border: 1px solid #1F2D3D;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-self: center;
+    min-height: 150px;
+    background-color: #ffffff;
+    box-shadow: 10px 10px  0px rgba(113, 201, 248, 0.3);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.2rem;
+    transition: transform 0.2s ease;
+}
+.announcement .card .left{
+    width: 70%;
+    margin-right: 10px;
+}
+.announcement .content{
+    font-size: 14px;
+}
+.announcement .card-right{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(250, 224, 231);
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 10px 10px 5px rgba(113, 201, 248, 0.4);
+}
+.card-title{
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.announcement .card-right span:last-child{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+/*endregion annoucement section end  */
+
+@media (max-width:1170px){
+    .sentence span{
+        display: none;
+    }
+    .sentence p{
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+    .intro{
+        flex-direction: column;
+    }
+    .intro .left,.intro .right{
+        width: 100%;
+        height: 300px;
+        align-items: center;
+    }
+    .intro .left img{
+        width: 300px;
+    }
+    .sentence{
+        width: 280px;
+    }
+    .intro .left .bcc{
+        height: 300px;
+        width: 300px;
+        top: -20px;
+        right: -25px;
+    }
+    .shell{
+        grid-template-columns: 2fr;
+    }
+}

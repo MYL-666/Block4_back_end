@@ -1,0 +1,282 @@
+/* 
+ * header&footer.css
+ * This file contains all the styling for the website's header and footer components.
+ * It includes styles for navigation, buttons, layout, and responsive design.
+ */
+
+/* ============ GLOBAL STYLES ============ */
+/* Reset and base styles */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+body{
+    background-color: rgb(246, 252, 255);
+    overflow-x: hidden;
+}
+.up,.refresh,.add-new-chat{
+    position: fixed;
+    bottom: 95px;
+    right: 2rem;   
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #392f41;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+.refresh{
+    bottom: 25px;
+}
+.add-new-chat{
+    bottom: 160px;
+}
+.add-new-chat i{
+    font-size: 1.5rem;
+}
+.add-new-chat:hover::after,.refresh:hover::after,.up:hover::after{
+    position: absolute;
+    content: 'Add New Chat';
+    width: 90px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #00000019;
+    left: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 500;
+}
+.up:hover::after{
+    content: 'Back to Top';
+    width: 70px;
+    left: -80px;
+}
+.refresh:hover::after{
+    content: 'Refresh';
+    width: 50px;
+    left: -60px;
+}
+header{
+    /* background-color: #d6ecf0 ; */
+    width: 100%;
+    height: 8vh;
+    border-bottom: 1px solid #d6ecf0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container{
+    padding: 1vh 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.container-h{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 1.5rem;
+}
+.header-c{
+    width: auto;
+    display: flex;
+}
+.header-c>p{
+    font-weight: bold;
+    color: #392f41;
+    margin-right: 10px;
+}
+header form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header .left{
+    display: flex;
+    align-items: center;
+}
+header .left .icon-box{
+    margin: 0 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(205, 237, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+header .left .icon-box a{
+    text-decoration: none;
+    color: #392f41;
+}
+header .left .icon-box:hover{
+    background-color: #aed8db;
+}
+header .input{
+    width: 250px;
+    border-radius: 30px;
+    background-color: rgb(226, 244, 250);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3px 10px;
+    position: relative;
+}
+.input>button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+header input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+footer{
+    /* margin-top: 2rem; */
+    width: 100%;
+    background-color: #d6ecf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5rem;
+    color: #392f41;
+}
+ul{
+    list-style: none;
+}
+.top{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.wrap>p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.wrap>ul{
+    flex-direction: column;
+}
+.wrap li{
+    margin: .5rem 0;
+}
+.wrap>div{
+    font-weight: 600;
+}
+.wrap a{
+    color: #392f41;
+    text-decoration: none;
+}
+.wrap a:hover,.contact-item>a:hover{
+    text-decoration: underline;
+}
+.contact{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-bottom: 2rem;
+    border-bottom: #392f41 1px solid;
+    margin-bottom: 2rem;
+}
+.contact-item i{
+    font-size: 2rem;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.contact-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-item>span,.contact-item>a{
+    font-size: 12px;
+    color: #392f41;
+    text-decoration: none;
+    cursor: pointer;
+}
+.icon-facebook3,.icon-instagram,.icon-twiter{
+    font-size: 16px !important; 
+    padding-right:10px !important;
+}
+.bottom{
+    padding-bottom: 2rem;
+}
+
+@media (max-width:768px){
+    .top{
+        grid-template-columns: 1fr;
+    }
+    .top{
+        margin-bottom: 0;
+    }
+    .left>span,.breadcrumb{
+        font-size: .8rem;
+    }
+    .breadcrumb{
+        margin-left: .8rem;
+    }
+    footer{
+        padding: 2rem 0;
+    }
+    footer .wrap ul,.contact-item{
+        flex-direction: row;
+    }
+    footer .wrap ul li{
+        margin-left: 10px;
+    }
+    .contact-item{
+        justify-content: flex-start;
+        width: 60vw;
+        margin: .5rem 0;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-item:last-child{
+        justify-content: center;
+    }
+    header .right li a{
+        font-size: .8rem;
+    }
+    .bottom{
+        font-size: 12px;
+        padding: 0;
+    }
+}

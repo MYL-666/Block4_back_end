@@ -1,0 +1,1040 @@
+/* 
+ * table.form.css
+ * This file contains all the styling for tables and forms throughout the website.
+ * It includes styles for data tables, form inputs, buttons, modals, and various
+ * interactive elements. The design features a clean, modern interface with
+ * responsive layouts and consistent styling.
+ */
+
+/* ============ MAIN LAYOUT SECTION ============ */
+/* Main container styles */
+main{
+  position: relative;
+  display: flex;
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+
+/* Container styles */
+main .container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+}
+
+/* ============ TITLE AND NAVIGATION SECTION ============ */
+/* Page title and navigation styles */
+.titles{
+    padding: 1rem 0;
+    border-bottom: 1px solid #d9e4e2;
+    width: 100%;
+    color: #3BAFDA;
+}
+
+.titles a,.titles>span{
+    font-size: 14px;
+    color: #3BAFDA;
+}
+
+.titles a{
+    text-decoration: none;
+}
+
+.titles a:hover{
+    text-decoration: underline;
+}
+
+/* ============ FORM ELEMENTS SECTION ============ */
+/* Form title styles */
+.form-title{
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #61757a;
+    color: #2F6766;
+}
+
+/* Management Area Styles */
+#management{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Form Item Styles */
+.form-item{
+    width: 50%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+/* Form input and select styles */
+select,.form-item .input {
+    height: 2rem;
+    border-radius: 20px;
+    border: 1px #61757a5f solid;
+    margin-top: 5px;
+}
+
+.form-item .input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 1rem;
+}
+
+.form-item input{
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+/* Button Container Styles */
+.button{
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Label Styles */
+label{
+    color: #333;
+}
+
+/* Radio Button Group Styles */
+.radio-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    width: auto;
+}
+
+.radio-item label{
+    margin-right: 10px;
+}
+
+input[type="radio"]{
+    width: 20px;
+}
+
+.input.for_radio{
+    border: none;
+}
+
+input[type="radio"]:checked {
+    accent-color: rgb(107, 148, 227);
+}
+
+/* Textarea Styles */
+.form-item.textarea{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+}
+
+.input.nothin{
+    visibility: hidden;
+}
+
+/* Table Styles */
+.table .head{
+  width: 100%;
+  margin: 1rem 0;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Add New Record Button Styles */
+.table .head .add-new>button{
+  width: 140px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(226, 244, 250);
+}
+
+.table .head .add-new>button:hover{
+  background-color: #a2dce0;
+  cursor: pointer;
+}
+.toggle-more{
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+#insert{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hidden-row {
+  display: none;
+}
+
+#insert>i{
+  margin-right: 10px;
+}
+
+/* Table Title Styles */
+.table-title{
+  font-size: 2rem;
+  color: #1F2D3D;
+}
+
+/* Basic Table Styles */
+.table{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+.table table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+.table table.salary{
+  border-collapse: collapse;
+}
+/* Table header styles */
+.table thead th {
+    color: #1f2d3dc5;
+    font-weight: normal;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Table Cell Styles */
+.table tbody td {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Table Row Styles */
+tbody tr {
+    background-color: #fefefe; 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    margin: 5px;
+}
+.rows.son{
+  background-color: #f9f9fbd3;
+
+  font-size: 10px;
+}
+/* 添加旋转类 */
+.icon-rotate {
+  transform: rotateZ(180deg);
+  transition: transform 0.3s ease;
+}
+
+td>img[src="../public/img/no-cover.png"]{
+  height: 190px;
+}
+tr.rows.son td:first-child {
+  position: relative;
+}
+tr.rows.son td:first-child::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #d0e4ff; 
+}
+tbody tr:hover {
+    background-color: rgb(225, 242, 251);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* ============ BUTTON STYLES SECTION ============ */
+/* Table action buttons */
+.table .btnDelete,.table .btnEdit {
+    background-color: #E74C3C;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table .btnDelete:hover {
+    background-color: #c0392b;
+}
+
+/* Icon Styles */
+.icon-dui{
+    color: rgba(30, 159, 84, 0.608);
+}
+
+.icon-cuowutishitianchong{
+    color: #c0392b;
+}
+
+/* Disabled Button Styles */
+.fake{
+    background-color: #e74d3c8c;
+    cursor: not-allowed;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.fake:hover{
+    background-color:#e74d3c8c;
+}
+
+.table .btnEdit{
+    background-color: rgb(107, 148, 227);
+}
+
+.table .btnEdit:hover{
+    background-color: rgb(70, 84, 144);
+}
+
+/* ============ MODAL FORM SECTION ============ */
+/* Modal form container */
+.swal-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.swal-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swal-label{
+    width: 30% !important;
+    height: 2.5rem;
+    font-size: 14px;
+}
+
+.my-swal-input{
+    border-radius: 10px !important;
+    width: 70% !important;
+    border: 1px solid;
+    margin-bottom: 10px;
+    height: 2.5rem;
+    outline: none;
+    padding-left: 1rem;
+    font-size: 14px;
+}
+
+/* Modal Radio Button Styles */
+.swal-label.radio{
+    width: 50% !important;
+}
+
+.my-swal-input.radio{
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.swal-radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.swal-radio>label{
+    margin-right: 5px;
+}
+
+.swal-radio>.label{
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.my-swal-input.amount{
+    width: 50%;
+}
+
+/* ============ STUDENT CARD SECTION ============ */
+/* Student card container */
+.students-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.insert-new-kid{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  border-radius: 10px;
+  width: 150px;
+  height: 2rem;
+  background-color: #c7e7f3;
+  border: none;
+  transition: .2s ease;
+  cursor: pointer;
+}
+.insert-new-kid:hover{
+  transform: translateY(-5px);
+}
+/* Student Card Styles */
+.student-card{
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 1rem);
+  min-width: 300px;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(59, 175, 218, 0.15), 
+              0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(59, 175, 218, 0.1);
+  margin: 0;
+  transition: .2s ease;
+}
+
+.student-card:hover{
+  transform: translateY(-5px);
+}
+
+/* Student Card Top Section Styles */
+.student-card .top{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.student-card .top .left{
+  width:30%;
+  margin-right: 10px;
+}
+
+.student-card .top .left img{
+  width: 90%;
+}
+
+.student-card .top .right{
+  width: 70%;
+  font-size: 14px;
+}
+
+/* Student Information Item Styles */
+.student-card .items{
+  display: flex;
+  width: 100%;
+  margin-bottom: 8px;
+  align-items: flex-start;
+}
+
+.student-card .label{
+  margin-right: 10px;
+  min-width: 100px;
+  width: 100px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.student-card .items>span{
+  font-style: italic;
+  flex: 1;
+  text-align: left;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Parent Information Card Styles */
+.student-card .bottom{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  font-size: 12px;
+  width: 100%;
+}
+
+.parent-shell{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.student-card .bottom>p{
+  border-bottom: 1px solid #a2dce0;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(56, 154, 172);
+}
+
+.bottom .item{
+  display: flex;
+  margin-bottom: 5px;
+}
+.parent-card,.teacher-card{
+  width: calc(50% - 5px);
+  background-color: rgb(248, 250, 252);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(59, 175, 218, 0.08), 
+              0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(59, 175, 218, 0.08);
+}
+.teacher-card{
+  width: 100% !important;
+  background-color: transparent;
+}
+.parent-card .parent-label,.teacher-card .parent-label{
+  width: 25%;
+  color: #3BAFDA;
+  font-weight: 500;
+  margin-right: 10px;
+}
+.teacher-card .item{
+  width: 100% !important;
+  justify-content: space-between;
+}
+.parent-card .item span,.teacher-card .item span{
+  width: 60%;
+  color: #1F2D3D;
+}
+.teacher-card .item span{
+  width: 50%;
+}
+
+.none.parent-card{
+  width: 100%;
+  text-align: center;
+  height: auto;
+  background-color: #f8fafc;
+  border: 1px dashed rgba(59, 175, 218, 0.2);
+  box-shadow: none;
+  color: #666;
+  padding: 15px;
+}
+/* ============ PROFILE SECTION ============ */
+/* Profile container styles */
+.profile-shell{
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+}
+.profile-shell.big{
+  display: flex;
+  justify-content: center;
+}
+.profile-shell.small{
+  justify-content: center;
+
+}
+.profile-shell.small>.leftside{
+  width: 80%;
+}
+.username2{
+  font-size: 1.5rem;
+  width: 80%;
+}
+.profile-shell.big>.leftside{
+  width: 80%;
+
+}
+.profile-shell.big>.leftside .user-box.big{
+  width: 70%;
+}
+.user-box.big .username2:first-child{
+  font-weight: 500;
+  font-size: 2rem;
+}
+.leftside{
+  width: 70%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px 2rem;
+  padding-top: 50px;
+}
+.leftside .top{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leftside .top img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 3rem;
+}
+.leftside .user-box{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leftside .user-box .username{
+  font-weight: 500;
+  font-size: 4rem;
+  font-family: Mrs Saint Delafield;
+}
+.leftside .user-box .user-role{
+  font-weight: 300;
+  width: 100px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+}
+.leftside .personal-container .personal-detail{
+  width: 200px;
+  text-align: center;
+}
+.infor-box{
+  border: 1px solid #9999994e;
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+}
+.profile-e{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background-color: transparent;
+  border: 1px solid #00000036;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.profile-e:hover{
+  background-color: rgba(128, 128, 128, 0.108);
+}
+.profile-e>span{
+  margin-left: 10px;
+}
+.infor-box .personal-title>span{
+  font-weight: bold;
+}
+.infor-box .personal-box .personal-container{
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+.infor-box .personal-box .personal-label{
+  width: 200px;
+  font-weight: 300;
+
+}
+.infor-box .personal-box .personal-detail{
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.rightside{
+  width: 28%;
+  margin-left: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 50px;
+  align-items: center;
+}
+.rightside>p{
+  font-weight: 600;
+}
+.doughnut{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 2rem 0;
+}
+#progressChart {
+  width: 100% !important;
+  height: 100% !important;
+}
+#progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+.checklist .checklist-item{
+  display: flex;
+  align-items: center;
+  margin: 25px;
+  font-size: 14px;
+}
+.checklist-item .reason{
+  margin: 0 10px;
+  font-weight: 500;
+}
+.percentage{
+  font-weight: 300;
+}
+/* ============ LIBRARY SECTION ============ */
+/* Library container styles */
+.library-container,.books-container{
+  width: 100%;
+  background-color: rgb(226, 244, 250);
+}
+.library-top{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  padding-bottom: 40px;
+  /* background-image: linear-gradient( 0deg,  rgba(247,247,247,1) 23.8%, rgba(252,221,221,1) 92% ); */
+  /* background-color: rgb(255, 246, 239); */
+}
+.library-top .book-shell-title.top-title{
+  font-size: 2rem !important;
+  font-weight: 500;
+}
+.read-more{
+  background-color: transparent;
+  padding: 4px 10px;
+  margin: 20px;
+}
+.top-container{
+  display: flex;
+  align-items: flex-end;
+}
+.top-img{
+  width: 120px;
+  height: 180px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px rgb(0,0,0,0.2);
+}
+.top-img:first-child{
+  box-shadow: -5px 5px 5px  rgba(0, 0, 0, 0.2);
+}
+.top-img:nth-child(2){
+  width: 150px;
+  height: 220px;
+}
+.best-sell{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.book-shell-title{
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 20px;
+}
+.book-shell-title::after{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 150px;
+  height: 2px;
+  background-color: rgb(115, 185, 198);
+}
+.books-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.top-container{
+  background-color: rgb(226, 244, 250);
+}
+.book-card {
+  flex: 0 0 200px;
+  padding: 20px;
+  border: #999999b3 solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 5px ;
+  /* background-image: linear-gradient( 109.6deg,  rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1% ); */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.best-sell{
+  background-color: #fff !important;
+  padding: 30px 0;
+}
+.book-card img {
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.book-info .author {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+.book-info .borrow-time{
+  color: #cd51439c;
+  font-size: 12px;
+}
+.borrow-book,.return-book{
+  width: 100px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: transparent ;
+  color: rgb(64, 174, 194);
+  border: 1px solid rgb(115, 185, 198);
+  height: 1.5rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.book-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 3em; 
+  line-height: 1.5em;
+  margin-top: 8px;
+  font-weight: 600;
+}
+.duedate{
+  font-size: 12px;
+  font-weight: 500;
+}
+.borrow-book:hover,.return-book:hover{
+  background-color: rgb(115, 185, 198);
+  color: #fff;
+}
+.cutline{
+  width: 100%;
+  height: 80px;
+  margin: 20px 0;
+  background-size: contain;
+  background-image: url(../../public/img/dividingLine.png);
+}
+.book-card.big{
+  flex: 0 0 300px;
+}
+.date-range {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #333;
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.date-range>.box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+.date-range .label {
+  font-weight: 600;
+  color: #555;
+}
+
+.date-range .date {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.date-range .date.due {
+  background-color: #ffe9e9;
+  color: #d93025;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.book-card.borrowed {
+  opacity: 0.6;
+  position: relative;
+  pointer-events: none; 
+}
+
+.book-card.borrowed::after {
+  content: "Borrowed";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #f44336;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* ============ SEARCH BAR SECTION ============ */
+/* Search form styles */
+.search-form{
+  display: flex;
+  width: 100%;
+}
+.search-box,.catalogue{
+  height: 2.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  border: rgb(56, 154, 172) .5px solid;
+}
+.search-box>input{
+  border: 0;
+  outline: none;
+  width: 200px;
+}
+.search-box>button,.reset{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: .3s ease-out;
+  color: #999;
+}
+.search-box>button:hover{
+  color: #333;
+  transform: scale(1.03);
+}
+.reset{
+  background-color: rgb(116, 197, 240);
+  padding: 3px 10px;
+  color: #ffffff;
+  border-radius: 18px;
+}
+.reset:hover{
+  background-color:rgb(67, 143, 185) ;
+}
+.catalogue{
+  width: 250px;
+
+}
+#catalogue{
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
+.nav-bar{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px;
+}
+.nav-bar ul{
+  display: flex;
+  gap: 20px;
+}
+.nav-bar ul li{
+  list-style: none;
+}
+.nav-bar ul li a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.nav-bar ul li a:hover{
+  border-color: rgb(116, 197, 240);
+}
+.nav-bar ul li a.active{
+  border-color: rgb(116, 197, 240);
+}
+/* ============ RESPONSIVE DESIGN SECTION ============ */
+/* Media queries for responsive layouts */
+@media (max-width: 900px) {
+  .student-card {
+    width: calc(100% - 2rem);
+  }
+  .students-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile table adjustments */
+  .table table, .table thead, .table tbody, .table th, .table td, .table tr {
+    display: block;
+  }
+
+  .table thead tr {
+    display: none;
+  }
+
+  .table tbody td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  .table tbody td::before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  /* Mobile Parent Card Style Adjustments */
+  .parent-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+  

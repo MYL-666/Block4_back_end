@@ -1,0 +1,145 @@
+/* 
+ * slidebar.css
+ * This file contains all the styling for the website's sidebar navigation.
+ * It includes styles for the sidebar container, user profile section,
+ * navigation items, and interactive elements. The design features a clean,
+ * modern interface with hover effects and active states.
+ */
+
+/* ============ SIDEBAR CONTAINER SECTION ============ */
+/* Main sidebar container styles */
+.slidebar{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    position: sticky;
+    font-size: 14px;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #1F2D3D;
+}
+
+/* ============ SCHOOL LOGO SECTION ============ */
+/* School name and logo styles */
+.school{
+    position: relative;
+}
+.school>span{
+    font-weight: bold;
+    font-family: Mrs Saint Delafield;
+    font-size: 20px;
+}
+
+/* ============ USER PROFILE SECTION ============ */
+/* Profile picture container */
+.pro-pic{
+    width: 100px;
+    margin: 10px 0;
+    height: 100px;
+    background-color: rgb(246, 252, 255);
+    border-radius: 50%;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* Username display styles */
+.username{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.username>span{
+    letter-spacing: 1px;
+}
+.username>p{
+    font-size: 14px;
+    color: #1f2d3db0;
+}
+
+/* ============ NAVIGATION ITEMS SECTION ============ */
+/* Navigation list styles */
+.slidebar-item{
+    list-style: none;
+    width: 100%;
+}
+.slidebar-item>li{
+    margin: 1.2rem 0;
+    width: 100%;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: .1s ease;
+}
+.slidebar-item>li>a>i{
+    margin:0 20px;
+}
+
+/* Logout button styles */
+.logout{
+    width: 100%;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+/* Navigation link styles */
+.slidebar-item>li>a{
+    text-decoration: none;
+    color: #1F2D3D;
+}
+
+/* Hover and active states */
+.slidebar-item>li>a:hover,.logout:hover{
+    color: #3BAFDA;
+}
+.slidebar-item>li:hover{
+    border-left: 2px solid #3BAFDA;
+}
+
+/* ============ DROPDOWN MENU SECTION ============ */
+/* Dropdown list styles */
+.list{
+    display: none;
+}
+.list.active{
+    display: block;
+}
+
+/* Active state styles */
+li.active2{
+    border-left: #3BAFDA 2px solid;
+}
+li.active2 a{
+    color: #3BAFDA !important;
+}
+
+/* ============ CHART CONTAINER SECTION ============ */
+/* Chart container styles */
+.chart-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Chart card styles */
+.chart-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+}
+
+/* Chart element styles */
+.chart-container #genderChart, #capacityChart,#birthdayChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+  
+

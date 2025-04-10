@@ -1,0 +1,409 @@
+/* 
+ * chat.css
+ * This file contains all the styling for the chat interface and related components.
+ * It includes styles for the main layout, chat boxes, user interface elements,
+ * announcements, swiper components, and decorative elements like hangers and calendars.
+ */
+
+/* ============ MAIN LAYOUT SECTION ============ */
+/* Main container styles */
+main{
+    min-height:80vh ;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+/* Main container inner layout */
+main .container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+/* ============ CHAT BOX SECTION ============ */
+/* Chat box overall layout */
+.chat-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+/* Chat card grid layout */
+.chat-shell{
+    width: 100%;
+    column-count: 3;
+    column-gap: 1rem;
+    padding: 1rem;
+}
+
+/* Chat card styles */
+.chat-card{
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    break-inside: avoid;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    position: relative;
+    padding-top: 2rem;
+}
+
+/* Chat card height settings for different rows */
+.chat-card:nth-child(4n+3){
+    min-height: 80px;
+}
+.chat-card:nth-child(4n+1) {
+    min-height: 100px;
+}
+.chat-card:nth-child(4n+2) {
+  min-height: 110px;
+}
+.chat-card:nth-child(4n) {
+  min-height: 90px;
+}
+
+/* Chat card title styles */
+.chat-card>p{
+    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+/* Chat card hover effect */
+.chat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+  
+/* Chat card header styles */
+.chat_header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Delete button styles */
+.chat-card .btnDelete{
+    position: absolute;
+    top: 1rem;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background-color: #fff;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+/* Edit button styles */
+.chat-card .btnEdit{
+    position: absolute;
+    top: 1rem;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background-color: #fff;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+/* Edit button hover effect */
+.chat-card .btnEdit:hover{
+    background-color: #eeeeee;
+} 
+/* Delete button hover effect */
+.btnDelete:hover{
+    background-color: #eeeeee;
+}
+
+/* Delete button link styles */
+.btnDelete a{
+    text-decoration: none;
+    color: #222;
+}
+
+/* Chat content styles */
+.chat-card .chat-content {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+/* Chat card footer styles */
+.chat-footer{
+    width: 100%;
+}
+
+/* Chat card footer icon styles */
+.chat-card .chat-footer .icons{
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 0.8rem;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* ============ USER INTERFACE ELEMENTS SECTION ============ */
+/* User avatar styles */
+img[alt="profile_photo"]{
+    width: 40px;
+    margin-right: 20px;
+    object-fit: cover;
+    height: 40px;
+}
+
+/* Chat header information styles */
+.chat_header .box>p{
+    font-weight: 500;
+    font-size: 20px;
+}
+.chat_header .box>span{
+    font-weight: 200;
+    font-size: 14px;
+}
+
+/* Date styles */
+.date{
+    width: 100%;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+/* Character count styles */
+.char-count {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+/* Input field styles */
+input[name='chat-title'], textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+/* Textarea styles */
+textarea{
+  height: 200px;
+}
+
+/* Radio button styles */
+input[type='radio']{
+    width: 50px;
+}
+
+/* Radio button container styles */
+.my-swal-input.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heart icon hover effect */
+.icon-aixin_shixin:hover{
+   color: rgb(208, 63, 63);
+}
+
+/* ============ ANNOUNCEMENT SECTION ============ */
+/* Announcement section styles */
+.annoucement{
+    width: 100%;
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Announcement title container styles */
+.annoucement-title-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #392f41;
+    margin-bottom: 20px;
+    border-right: none;
+    border-left: none;
+}
+
+/* Announcement title styles */
+.annoucement-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.calendar-body{
+  position: relative;
+}
+.calendar-body .btnDelete{
+  position: absolute;
+  top:0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #2222226e;
+}
+.calendar-body:hover .btnDelete{
+  opacity: 1;
+}
+.calendar-body .btnEdit{
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #2222226e;
+}
+.calendar-body:hover .btnEdit{
+  opacity: 1;
+}
+/* ============ SWIPER SECTION ============ */
+/* Swiper container styles */
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Swiper slide styles */
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* ============ MODERN HANGER SECTION ============ */
+/* Modern hanger styles */
+.modern-hanger {
+  position: relative;
+  width: 220px;
+  margin: 30px auto;
+  text-align: center;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hanger top and bottom bar styles */
+.bar-top,
+.bar-bottom {
+  width: 100%;
+  height: 8px;
+  background-color: #a3c4dc; 
+  border-radius: 4px;
+}
+
+/* Top bar styles */
+.bar-top {
+  position: relative;
+  margin-bottom: -4px;
+}
+
+/* Top bar decorative effect */
+.bar-top::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotateZ(45deg);
+  width: 40px;
+  height: 40px;
+  border: 2px solid #aac3d7;
+  border-bottom: none;
+  border-right: none;
+}
+
+/* ============ CALENDAR SECTION ============ */
+/* Calendar body styles */
+.calendar-body {
+  background-color: #ffffff;
+  padding: 20px 15px;
+  width: 100%;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Calendar title styles */
+.calendar-title {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: #1e3a5f;
+}
+
+/* Calendar date styles */
+.calendar-date {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #7b9aad;
+  margin-bottom: 10px;
+}
+
+/* Calendar text styles */
+.calendar-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2f3e4d;
+}
+
+/* Hanger hover effect */
+.modern-hanger {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-hanger:hover {
+  transform: translateY(4px) rotateZ(-1deg);
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
+}
+  
+  

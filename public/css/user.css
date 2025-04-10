@@ -1,0 +1,127 @@
+.usercontainer{
+    position: relative;
+    display: flex;
+    align-items: stretch !important;
+    padding-bottom: 2rem;
+}
+.usercontainer .left{
+    width: 30%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    z-index: 2;
+   align-self: stretch;
+}
+main{
+    min-height:80vh ;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.setting-title>span{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+main .container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+.input-item{
+    width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.input{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.input input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-left: 5px;
+    background-color: transparent;
+}
+.radio-item{
+    display: flex;
+    align-self: center;
+    margin-right: 3rem;
+}
+.radio-item label{
+    margin-right: 1rem;
+    color: #1F2D3D;
+    font-weight: normal;
+}
+input[type="radio"]:checked {
+    accent-color: rgb(132, 198, 216);
+}
+.input-item.radio .input{
+    background-color: transparent;
+}
+#save{
+    width: 8rem;
+    height: 2rem;
+    background-color: rgb(132, 198, 216);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .2s ease;
+}
+label,.input-item.radio>span{
+    color: #1F2D3D;
+    font-weight: bold;
+}
+#save:hover{
+    background-color: rgb(118, 174, 189);
+    box-shadow: 2px 2px 2px rgb(132, 198, 216);
+    transform: scale(1.1);
+}
+.input input::placeholder {
+    color: #AAAAAA ;
+    font-style: italic ;
+}
+
+.progress-container {
+    position: absolute;
+    top: 20px;
+    right: 5rem;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgb(205, 237, 246);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-circle span {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
