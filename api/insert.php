@@ -508,7 +508,10 @@ if($table==='teachers'){
     // ================= INSERT TEACHER =================
     // Insert the teacher into the teacher table
     try {
-        $stmt=$conn->prepare("INSERT INTO teachers (Last_name,First_Name,phone,backgroundCheck) VALUES (:last_name, :first_name, :phone, :bcc)");
+        $stmt=$conn->prepare("
+            INSERT INTO teachers 
+            (Last_name,First_Name,phone,backgroundCheck) 
+            VALUES (:last_name, :first_name, :phone, :bcc)");
         $stmt->execute([
             ":last_name"=>$LastName,
             ":first_name"=>$FirstName,

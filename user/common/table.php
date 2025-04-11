@@ -443,9 +443,7 @@ if(($_SESSION['role']==='teacher' && $table_name==='students') ||
           <div class="catalogue">
             <select name="catalogue" id="catalogue">
             <option value="none" selected>All <?= $title ?></option>
-              <!-- for students  -->
               <?php
-
                   foreach($table as $k=>$v){
                     $k=='Kids1' ? $v='kid\'s name' : "";
                     if($k!="Action" && $k!="kids2" && $k!="cover"){
@@ -517,7 +515,11 @@ if(($_SESSION['role']==='teacher' && $table_name==='students') ||
               }
               ?>  
                   
-              <tr class="rows <?= ($table_name==='salaries' && $_SESSION['role']==='admin') ? $extraClass : "" ?> <?= $table_name==='salaries' && !$teacherFirstRow && $_SESSION['role']==='admin' ? "son" : "" ?>" data-id="<?php echo $row[$tableID] ?>" data-tableName="<?php echo $table_name  ?>" data-tableID="<?php echo $tableID  ?>">
+              <tr class="rows <?= ($table_name==='salaries' && $_SESSION['role']==='admin') ? $extraClass : "" ?> 
+                  <?= $table_name==='salaries' && !$teacherFirstRow && $_SESSION['role']==='admin' ? "son" : "" ?>" 
+                  data-id="<?php echo $row[$tableID] ?>" 
+                  data-tableName="<?php echo $table_name  ?>" 
+                  data-tableID="<?php echo $tableID  ?>">
                 <?php foreach ($fields as $field){ 
                   ?>
                   <td><?php 
