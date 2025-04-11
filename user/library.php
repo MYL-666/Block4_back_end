@@ -203,7 +203,7 @@ $mostBorrowed=$stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // ================= MY BORROWED BOOKS SECTION =================
 // Get books currently borrowed by the logged-in student
-$stmt=$conn->prepare("SELECT * from library as l JOIN borrowed_book as b on l.Book_id=b.Book_id where b.student_id=:student ");
+$stmt=$conn->prepare("SELECT * from library as l JOIN borrowed_book as b on l.Book_id=b.Book_id where b.student_id=:student AND b.returnDate is NULL");
 $stmt->execute([':student'=>$_SESSION['roleID']]);
 $myBook=$stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

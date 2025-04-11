@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['book_id']) && isset($
     // ================= UPDATE BORROWED BOOK =================
     // Update the borrowed book status to 'Returned'
     $stmt2 = $conn->prepare("UPDATE borrowed_book 
-        SET returned = 1, returnDate = :returnDate 
+        SET  returnDate = :returnDate 
         WHERE Book_id = :book AND student_id = :student 
         ORDER BY borrowDate DESC LIMIT 1");
 
