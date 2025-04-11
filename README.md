@@ -50,7 +50,69 @@ If no API is provided, the system will raise an error. (See Figure 24 in documen
 
 ---
 ## 📁 Project Structure
-project-root/ ├── api/ # Backend API handlers (insert, delete, fetch, session, etc.) │ ├── borrowBook.php │ ├── chartDrawing.php │ ├── checkBind.php │ ├── delete.php │ ├── Edit.php │ ├── fetch.delete.php │ ├── fetch.edit.php │ ├── fetch.insert.php │ ├── fetchUserInfo.php │ ├── getSessionUser.php │ ├── insert.php │ ├── loginV.php │ ├── logout.php │ ├── profile.doughnut.php │ ├── registerV.php │ └── returnBook.php │ ├── config/ # DB connection, backend validation, HTML helpers │ ├── backValidation.php │ ├── db.php │ └── htmlContent.php │ ├── public/ │ ├── css/ # Front-end styles │ │ ├── chat.css │ │ ├── header&footer.css │ │ ├── index.css │ │ ├── login.css │ │ ├── slidebar.css │ │ ├── table.form.css │ │ └── user.css │ ├── icons/ # Iconfont assets │ │ ├── iconfont.css │ │ ├── iconfont.ttf │ │ ├── iconfont.woff │ │ └── iconfont.woff2 │ ├── img/ # Image assets │ │ ├── admin.jpg │ │ ├── badge.png │ │ ├── dividingLine.png │ │ ├── library.png │ │ ├── no-cover.png │ │ ├── parent.jpeg │ │ ├── student.jpg │ │ ├── teacher.jpeg │ │ └── teachers.jpg │ ├── js/ │ │ └── frontValidation.js │ ├── user/ │ └── common/ # Role-based user modules (HTML + PHP) │ ├── chat.php │ ├── classes.php │ ├── footer.php │ ├── head.php │ ├── header.php │ ├── index.php │ ├── library.php │ ├── login.php │ ├── parents.php │ ├── salaries.php │ ├── slidebar.php │ ├── students.php │ ├── table.php │ └── teachers.php
+📦api
+ ┣ 📜borrowBook.php
+ ┣ 📜chartDrawing.php
+ ┣ 📜checkBind.php
+ ┣ 📜delete.php
+ ┣ 📜Edit.php
+ ┣ 📜fetch.delete.php
+ ┣ 📜fetch.edit.php
+ ┣ 📜fetch.insert.php
+ ┣ 📜fetchUserInfo.php
+ ┣ 📜getSessionUser.php
+ ┣ 📜insert.php
+ ┣ 📜loginV.php
+ ┣ 📜logout.php
+ ┣ 📜profile.doughnut.php
+ ┣ 📜registerV.php
+ ┗ 📜returnBook.php
+📦config
+ ┣ 📜backValidation.php
+ ┣ 📜db.php
+ ┗ 📜htmlContent.php
+ 📦public
+ ┣ 📂css
+ ┃ ┣ 📜chat.css
+ ┃ ┣ 📜header&footer.css
+ ┃ ┣ 📜index.css
+ ┃ ┣ 📜login.css
+ ┃ ┣ 📜slidebar.css
+ ┃ ┣ 📜table.form.css
+ ┃ ┗ 📜user.css
+ ┣ 📂icons
+ ┃ ┣ 📜iconfont.css
+ ┃ ┣ 📜iconfont.ttf
+ ┃ ┣ 📜iconfont.woff
+ ┃ ┗ 📜iconfont.woff2
+ ┣ 📂img
+ ┃ ┣ 📜admin.jpg
+ ┃ ┣ 📜badge.png
+ ┃ ┣ 📜dividingLine.png
+ ┃ ┣ 📜library.png
+ ┃ ┣ 📜no-cover.png
+ ┃ ┣ 📜parent.jpeg
+ ┃ ┣ 📜student.jpg
+ ┃ ┣ 📜teacher.jpeg
+ ┃ ┗ 📜teachers.jpg
+ ┗ 📂js
+ ┃ ┗ 📜frontValidation.js
+ 📦user
+ ┣ 📂common
+ ┃ ┣ 📜footer.php
+ ┃ ┣ 📜head.php
+ ┃ ┣ 📜header.php
+ ┃ ┣ 📜slidebar.php
+ ┃ ┗ 📜table.php
+ ┣ 📜chat.php
+ ┣ 📜classes.php
+ ┣ 📜index.php
+ ┣ 📜library.php
+ ┣ 📜login.php
+ ┣ 📜parents.php
+ ┣ 📜salaries.php
+ ┣ 📜students.php
+ ┗ 📜teachers.php
 
 ---
 
