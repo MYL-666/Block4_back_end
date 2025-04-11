@@ -23,7 +23,7 @@ Use the following pre-defined login credentials to access the system with differ
 
 > ⚠️ **IMPORTANT**:  
 To insert or update books in the library, make sure to set up your **Google Books API key** first.  
-This API is used in [`config/backendValidation.php`](config/backendValidation.php) to fetch book cover images from Google.  
+This API is used in [`config/backValidation.php`](config/backValidation.php) to fetch book cover images from Google.  
 If no API is provided, the system will raise an error. (See Figure 24 in documentation)
 
 ## 📌 Features
