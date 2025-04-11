@@ -5,6 +5,19 @@ A full-stack web-based management system built for St. Alphonsus Primary School 
 Developed using **PHP**, **MySQL**, **HTML/CSS/JavaScript**, and enhanced with modern UI libraries.
 
 ---
+## 🔐 Demo Accounts (For Testing Purposes)
+
+Use the following pre-defined login credentials to access the system with different roles:
+
+| Role     | Email                        | Password |
+|----------|------------------------------|----------|
+| Admin    | myl666@gmail.com             | 123456   |
+| Teacher  | emmalumi@gamil.com           | 222222   |
+| Student  | johnsmith@gmail.com          | 111111   |
+| Parent   | john@gamil.com               | 123123   |
+
+> 💡 These accounts are for demo/testing only. Passwords are stored securely in the system backend.
+
 
 ## 🚨 CAUTION
 
