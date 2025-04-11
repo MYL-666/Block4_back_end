@@ -50,6 +50,7 @@ If no API is provided, the system will raise an error. (See Figure 24 in documen
 
 ---
 ## 📁 Project Structure
+```bash
 📦api
  ┣ 📜borrowBook.php
  ┣ 📜chartDrawing.php
